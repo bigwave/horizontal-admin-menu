@@ -57,26 +57,39 @@
         display: inline-block;
         margin: 0;
         padding: 0;
-        width: 120px;
         border:  1px solid #ECECEC;
         border-width: 1px 1px 1px 1px;
         border-color: #ECECEC;
     }
-
+    #adminmenu div.wp-menu-name{
+        float:left;
+    }
     #adminmenu .wp-menu-image {
-        display: inline-block;
-        float: none;
+        float: left;
     }
 
+    #adminmenu .wp-submenu {
+        left:auto;
+    }
+
+    #adminmenu .wp-has-current-submenu:hover .wp-submenu-wrap {
+        top: auto !important;
+        display: block !important;
+        position: absolute;
+        background: #0073aa;
+    }
+
+    #adminmenu .opensub .wp-submenu-wrap {
+        top: auto !important;
+    }
+    
     #adminmenu a.menu-top {
         display: inline-block;
         float: none;
         min-width: 0;
-        width: 87px;
         border: 0;
-        padding: 5px 0 5px 5px;
+        padding-right: 8px;
         white-space: nowrap;
-        overflow: hidden;
     }
 
     #adminmenu li.wp-first-item {
@@ -91,8 +104,8 @@
 
     /* Change background when menu or submenu is selected */
     #adminmenu li.wp-has-current-submenu, #adminmenu li.current {
-        border: solid 1px #777;
-        background-color: #777;
+        /* border: solid 1px #777; */
+        background: #0073aa;
     }
 
     /* Top menu hover actions */
@@ -113,7 +126,8 @@
     }
 
     body.js #adminmenu li.wp-has-current-submenu:hover, body.js #adminmenu li.current:hover {
-        border: solid 1px #777;
+        /* border: solid 1px #777; */
+        background: #0073aa;
     }
 
     /***********************
@@ -156,7 +170,7 @@
 
     /* Rounded bottom corners (CSS3) */
     .wp-submenu li:last-child {
-        -moz-border-radius: 0 0 3px 3px;
+        -border-radius: 0 0 3px 3px;
         -webkit-border-bottom-right-radius: 3px;
         -webkit-border-bottom-left-radius: 3px;
         -khtml-border-bottom-right-radius: 3px;
